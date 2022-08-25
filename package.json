@@ -9,8 +9,7 @@
     "build": "rm -rf dist/ && tsc",
     "// === Release ===": "",
     "prepublishOnly": "pnpm run build",
-    "postpublish": " git push && git push --tags",
-    "release": "npm version patch && npm publish"
+    "release": "npm version patch && npm publish && git push && git push --tags"
   },
   "devDependencies": {
     "@types/node": "^15.12.2",
