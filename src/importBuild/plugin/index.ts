@@ -59,7 +59,9 @@ function importBuild(options: {
       const otherLibrary = config.vitePluginDistImporter.libraries[0]
       assert(otherLibrary)
       assert(otherLibrary.libraryName !== options.libraryName)
-      throw new Error(`Conflict between ${options.libraryName} and ${otherLibrary.libraryName}`)
+      throw new Error(
+        `Conflict between ${options.libraryName} and ${otherLibrary.libraryName}. Updating both to their latest version will likely solve the problem.`
+      )
     }
 
     config.vitePluginDistImporter.libraries.push({
