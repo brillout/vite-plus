@@ -1,6 +1,6 @@
 {
   "name": "@brillout/vite-plus",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vite Utilities",
   "dependencies": {},
   "main": "./index.js",
