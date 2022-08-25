@@ -1,1 +1,1 @@
-module.exports = require('../dist/importBuild/loadBuild')
+module.exports = require('../dist/plugins/importBuild/loadBuild')

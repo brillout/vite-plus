@@ -1,7 +1,7 @@
 export { findBuildEntry }
 export type { RollupOptions, RollupBundle }
 
-import { assert, assertPosixPath, viteIsSSR, rollupIsEsm } from './utils'
+import { assert, assertPosixPath, viteIsSSR, rollupIsEsm } from '../../../utils'
 
 // Subset of: `import type { NormalizedOutputOptions } from 'rollup'` (to avoid mismatch upon different Rollup versions)
 type RollupOptions = { entryFileNames: string | ((chunkInfo: any) => string); format: string }

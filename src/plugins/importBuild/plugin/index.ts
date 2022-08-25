@@ -3,7 +3,7 @@ export { importBuild }
 
 import type { Plugin, ResolvedConfig } from 'vite'
 import type { EmitFile } from 'rollup'
-import { isYarnPnP, assert, assertPosixPath, viteIsSSR, isAbsolutePath, toPosixPath, hasDefinedProp } from './utils'
+import { isYarnPnP, assert, assertPosixPath, viteIsSSR, isAbsolutePath, toPosixPath, hasDefinedProp } from '../../../utils'
 import path from 'path'
 import { writeFileSync } from 'fs'
 import { importBuildFileName } from '../shared/importBuildFileName'
@@ -32,7 +32,7 @@ function importBuild(options: {
 }): Plugin_ {
   let config: Config
   return {
-    name: `vite-plugin-import-build:${options.libraryName}`,
+    name: `@brillout/vite:importBuild:${options.libraryName}`,
     apply: (config, env) => env.command === 'build' && viteIsSSR(config),
     configResolved(config_: ConfigPristine) {
       config = resolveConfig(config_)

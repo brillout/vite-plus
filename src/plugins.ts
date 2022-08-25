@@ -1,1 +1,2 @@
-export { importBuild } from './importBuild/plugin/index'
+export { importBuild } from './plugins/importBuild/plugin/index'
+export { packageJsonFile } from './plugins/packageJsonFile'
