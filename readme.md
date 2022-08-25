@@ -1,9 +1,12 @@
-Automatically import `dist/server/`.
+# `@brillout/vite-plus`
 
-The import paths are statically analyzable, enabling bundlers to discover the entire dependency tree. (Which is needed for serverless services such as Cloudflare Workers, Vercel, etc.)
+Vite Utilities.
 
-Supports Yarn PnP.
+> **DO NOT** use. Reach out on GitHub or Discord, if you want to use this. (For now, these utilities are meant to be used only by [vite-plugin-ssr](https://vite-plugin-ssr.com/) and [Telefunc](https://telefunc.com/).)
 
-For more information, create a new GitHub ticket.
+## `@brillout/vite-plus/plugins/importBuild`
 
-It's currently used by [`vite-plugin-ssr`](https://vite-plugin-ssr.com/) and [Telefunc](https://telefunc.com/).
+Automatically import the server-side build files living at `dist/server/`.
+
+- In a way that is statically analyzable. So that bundlers are able to discover the entire dependency tree. (Which is needed for serverless services such as Cloudflare Workers, Vercel, etc.)
+- Supports Yarn PnP.
