@@ -10,7 +10,7 @@
 export { packageJsonFile }
 
 import type { Plugin, ResolvedConfig } from 'vite'
-import { isSSR_config, rollupIsEsm } from '../utils'
+import { viteIsSSR, rollupIsEsm } from '../utils'
 
 // This plugin can be included several times
 function packageJsonFile(): Plugin {
@@ -22,7 +22,7 @@ function packageJsonFile(): Plugin {
       config = config_
     },
     generateBundle(options, bundle) {
-      if (!isSSR_config(config)) return
+      if (!viteIsSSR(config)) return
       const isEsm = rollupIsEsm(options)
       const fileName = 'package.json'
       if (bundle[fileName]) return // May have already been generated, if this plugin was included several times
